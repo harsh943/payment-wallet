@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-  "extends": "@repo/typescript-config/base.json"
-=======
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
@@ -18,5 +15,4 @@
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
->>>>>>> dc9e37d (database-change)
 }
