@@ -9,5 +9,11 @@
     },
     "exports": {
         "./client": "./index.ts"
+<<<<<<< HEAD
+=======
+    },
+    "prisma": {
+        "seed": "ts-node prisma/seed.ts"
+>>>>>>> dc9e37d (database-change)
     }
 }

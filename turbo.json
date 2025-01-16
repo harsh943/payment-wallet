@@ -1,9 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
+<<<<<<< HEAD
   "globalEnv": [
     "JWT_SECRET"
   ],
+=======
+>>>>>>> dc9e37d (database-change)
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
