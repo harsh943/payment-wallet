@@ -10,6 +10,7 @@ export const GET = async () => {
             password: "123"
         }
     })
+    
     return NextResponse.json({
         message: "hi there"
     })
