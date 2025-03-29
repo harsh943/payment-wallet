@@ -86,12 +86,13 @@ export function SendCard() {
                             label="Amount" 
                             value={amount}
                             type="number"
-                            min="0"
-                            step="0.01"
                             onChange={(value) => {
-                                setAmount(value);
-                                setError("");
-                                setSuccess("");
+                                const numValue = Number(value);
+                                if (!isNaN(numValue)) {
+                                    setAmount(value);
+                                    setError("");
+                                    setSuccess("");
+                                }
                             }} 
                         />
                         <div className="mt-1 text-xs text-gray-500">
