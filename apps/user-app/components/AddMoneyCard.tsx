@@ -38,11 +38,19 @@ export const AddMoney = () => {
     
     return <Card title="Add Money">
     <div className="w-full">
-        <TextInput label={"Amount"} placeholder={"Amount"} onChange={(value) => {
-            setAmount(Number(value));
-            // Clear error when user starts typing
-            if (error) setError("");
-        }} />
+        <TextInput 
+            label={"Amount"} 
+            placeholder={"Amount"} 
+            type="number"
+            value={amount.toString()}
+            onChange={(value) => {
+                const numValue = Number(value);
+                if (!isNaN(numValue)) {
+                    setAmount(numValue);
+                    if (error) setError("");
+                }
+            }}
+        />
         
         {error && (
             <div className="text-red-500 text-sm mt-1">{error}</div>
