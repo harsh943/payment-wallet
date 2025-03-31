@@ -29,7 +29,6 @@ jobs:
     - name: Verify Pushed Image
       run: docker pull harsh943/payment-wallet:latest 
 
-      
     - name: Deploy to EC2
       uses: appleboy/ssh-action@master
       with:
