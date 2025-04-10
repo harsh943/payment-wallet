@@ -1,6 +1,5 @@
 name: Build and Deploy to Docker Hub
 
-
 on:
   push:
     branches:
@@ -41,3 +40,19 @@ jobs:
           sudo docker stop payment-wallet || true
           sudo docker rm payment-wallet || true
           sudo docker run -d --name payment-wallet -p 3005:3000 harsh943/payment-wallet:latest
+
+
+          # amazon alternative elastic beanstalk
+
+          # deploy db on aws rds ->i can but wont 
+          # if i have a db url then is houl replace the above lat run to below and add that to
+          # github action secret
+          # sudo docker run -e DATABASE_URL ${{SECRETS.DB_URL}} --restart-always -d --name payment-wallet -p 3005:3000 harsh943/payment-wallet:latest
+
+          # further i can try uploading it on ecr instead of docker hub and then pull it to ECS;
+
+
+          # Get a DB on neon.tech / RDS  / Aeiven and add a DB migration step to the DB
+          # Pass in the DB credentials while starting the docker image
+          # Start the docker image so that it restarts if it goes down (similar to pm2)
+          # Infarstructure as code->same thing like this for lainching ec2 instance
